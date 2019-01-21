@@ -58,7 +58,8 @@ loading-screen {
     bottom: 0;
 }
 
-div.sk-folding-cube {
+loading-screen .sk-folding-cube,
+.sk-folding-cube {
     width: 60px;
     height: 60px;
     position: relative;
