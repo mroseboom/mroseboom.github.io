@@ -4,17 +4,17 @@ export class App {
   }
   
   attached() {
-    const view = new OpenLayers.View({
-      center: OpenLayers.fromLonLat([-122.7917, 49.2856]),
+    const view = new ol.View({
+      center: ol.fromLonLat([-122.7917, 49.2856]),
       zoom: 16
     });
     
-    const map = new OpenLayers.Map({
+    const map = new ol.Map({
       target: "map",
       layers: [
-        new OpenLayers.TileLayer({
+        new ol.TileLayer({
           preload: 4,
-          source: new OpenLayers.OSM()
+          source: new ol.OSM()
         })
       ],
       view: view
