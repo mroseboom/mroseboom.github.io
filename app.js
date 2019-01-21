@@ -1,26 +1,20 @@
-import Map from "ol/Map.js";
-import View from "ol/View.js";
-import TileLayer from "ol/layer/Tile.js";
-import { fromLonLat } from "ol/proj.js";
-import OSM from "ol/source/OSM.js";
-
 export class App {
   constructor() {
     this.message = "Hello world";
   }
   
   attached() {
-    const view = new View({
-      center: fromLonLat([-122.7917, 49.2856]),
+    const view = new OpenLayers.View({
+      center: OpenLayers.fromLonLat([-122.7917, 49.2856]),
       zoom: 16
     });
     
-    const map = new Map({
+    const map = new OpenLayers.Map({
       target: "map",
       layers: [
-        new TileLayer({
+        new OpenLayers.TileLayer({
           preload: 4,
-          source: new OSM()
+          source: new OpenLayers.OSM()
         })
       ],
       view: view
