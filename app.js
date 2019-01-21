@@ -5,8 +5,10 @@ export class App {
   
   attached() {
     const view = new ol.View({
-      center: ol.proj.fromLonLat([-122.7917, 49.2856]),
-      zoom: 16
+      center: ol.proj.fromLonLat([14.2643, 46.6158]),
+      zoom: 5,
+      maxZoom: 16,
+      minZoom: 5
     });
     
     const map = new ol.Map({
