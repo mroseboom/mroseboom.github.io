@@ -12,9 +12,9 @@ export class App {
     const map = new ol.Map({
       target: "map",
       layers: [
-        new ol.TileLayer({
+        new ol.layer.Tile({
           preload: 4,
-          source: new ol.OSM()
+          source: new ol.source.OSM()
         })
       ],
       view: view
