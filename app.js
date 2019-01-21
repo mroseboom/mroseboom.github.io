@@ -5,7 +5,7 @@ export class App {
   
   attached() {
     const view = new ol.View({
-      center: ol.fromLonLat([-122.7917, 49.2856]),
+      center: ol.proj.fromLonLat([-122.7917, 49.2856]),
       zoom: 16
     });
     
